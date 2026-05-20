@@ -64,7 +64,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"name\":\"Proveedor Ejemplo\",\"rut\":\"12345678-9\",\"address\":\"Calle Ejemplo 123\",\"contact\":\"contacto@ejemplo.com\"}"
+              "raw": "{\r\n  \"name\": \"Proveedor Ejemplo\",\r\n  \"rut\": \"741852963-9\",\r\n  \"address\": \"Calle Ejemplo 123\",\r\n  \"contact\": \"contacto@ejemplo.com\"\r\n}"
             },
             "url": {
               "raw": "http://localhost:8080/api/suppliers",
@@ -93,10 +93,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"id\":1,\"name\":\"Proveedor Actualizado\",\"rut\":\"12345678-9\",\"address\":\"Calle Actualizada 456\",\"contact\":\"nuevo_contacto@ejemplo.com\"}"
+              "raw": "{\r\n  \"name\": \"Proveedor Actualizado\",\r\n  \"rut\": \"741852963-9\",\r\n  \"address\": \"Calle Actualizada 431\",\r\n  \"contact\": \"nuevo_contacto@ejemplo.com\"\r\n}"
             },
             "url": {
-              "raw": "http://localhost:8080/api/suppliers/1",
+              "raw": "http://localhost:8080/api/suppliers/6",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -105,7 +105,7 @@
               "path": [
                 "api",
                 "suppliers",
-                "1"
+                "6"
               ]
             }
           },
@@ -117,7 +117,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:8080/api/suppliers/1",
+              "raw": "http://localhost:8080/api/suppliers/6",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -126,7 +126,7 @@
               "path": [
                 "api",
                 "suppliers",
-                "1"
+                "6"
               ]
             }
           },
@@ -157,6 +157,54 @@
                 {
                   "key": "rutProveedor",
                   "value": "12345678-9"
+                },
+                {
+                  "key": "rutProveedor",
+                  "value": "98765432-1",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "fechaDesde",
+                  "value": "2023-01-01",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "fechaHasta",
+                  "value": "2023-02-01",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "numeroDocumento",
+                  "value": "INV-001",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "numeroDocumento",
+                  "value": "INV-002",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "fob",
+                  "value": "1000",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "moneda",
+                  "value": "CLP",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "moneda",
+                  "value": "USD",
+                  "type": "text",
+                  "disabled": true
                 }
               ]
             }
@@ -175,7 +223,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"invoiceNumber\":\"INV-001\",\"issueDate\":\"2023-01-01\",\"dueDate\":\"2023-01-31\",\"currencyType\":\"CLP\",\"incoterm\":\"FOB\",\"originCountry\":\"Chile\",\"destinationCountry\":\"Brasil\",\"fobValue\":100.0,\"supplierId\":1,\"details\":[{\"productDescription\":\"Producto 1\",\"quantity\":10,\"unitPrice\":10.0}]}"
+              "raw": "{\r\n  \"invoiceNumber\": \"INV-008\",\r\n  \"issueDate\": \"2023-01-01\",\r\n  \"dueDate\": \"2023-01-31\",\r\n  \"currencyType\": \"CLP\",\r\n  \"incoterm\": \"FOB\",\r\n  \"originCountry\": \"Chile\",\r\n  \"destinationCountry\": \"Brasil\",\r\n  \"fobValue\": 100,\r\n  \"supplierId\": 1,\r\n  \"details\": [\r\n    {\r\n      \"productDescription\": \"Producto 1\",\r\n      \"quantity\": 10,\r\n      \"unitPrice\": 10\r\n    }\r\n  ]\r\n}"
             },
             "url": {
               "raw": "http://localhost:8080/api/invoices",
@@ -204,7 +252,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"id\":1,\"invoiceNumber\":\"INV-001\",\"issueDate\":\"2023-02-01\",\"dueDate\":\"2023-02-28\",\"currencyType\":\"USD\",\"incoterm\":\"CIF\",\"originCountry\":\"Chile\",\"destinationCountry\":\"Argentina\",\"fobValue\":150.0,\"supplierId\":1,\"details\":[{\"productDescription\":\"Producto 1\",\"quantity\":5,\"unitPrice\":30.0}]}"
+              "raw": "{\r\n  \"issueDate\": \"2023-02-01\",\r\n  \"dueDate\": \"2023-02-28\",\r\n  \"currencyType\": \"USD\",\r\n  \"fobValue\": 150\r\n}"
             },
             "url": {
               "raw": "http://localhost:8080/api/invoices/1",
